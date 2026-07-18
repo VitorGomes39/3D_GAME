@@ -1,0 +1,45 @@
+# Modelo Low-Poly PS1: Entidade 1 (O Perseguidor) - Pivo na Base
+o Perseguidor
+# --- Vertices: Torso e Pernas Combinadas (Coluna Rigida Y=0 to Y=4) ---
+v -0.6000 0.0000 -0.4000
+v 0.6000 0.0000 -0.4000
+v 0.6000 0.0000 0.4000
+v -0.6000 0.0000 0.4000
+v -0.7000 4.0000 -0.5000
+v 0.7000 4.0000 -0.5000
+v 0.7000 4.0000 0.5000
+v -0.7000 4.0000 0.5000
+# --- Vertices: Cabeca (Caixa Rigida Y=4 to Y=6) ---
+v -0.5000 4.0000 -0.4000
+v 0.5000 4.0000 -0.4000
+v 0.5000 4.0000 0.4000
+v -0.5000 4.0000 0.4000
+v -0.5000 6.0000 -0.4000
+v 0.5000 6.0000 -0.4000
+v 0.5000 6.0000 0.4000
+v -0.5000 6.0000 0.4000
+# --- Coordenadas UV (Mapeamento Simples para Textura Pixelada) ---
+vt 0.0000 0.0000
+vt 1.0000 0.0000
+vt 1.0000 1.0000
+vt 0.0000 1.0000
+vt 0.5000 0.5000
+# --- Faces do Corpo ---
+f 1/1 2/2 6/3 5/4
+f 2/1 3/2 7/3 6/4
+f 3/1 4/2 8/3 7/4
+f 4/1 1/2 5/3 8/4
+# Topo do corpo onde a cabeca se encaixa
+f 5/1 6/2 10/3 9/4
+f 6/1 7/2 11/3 10/4
+f 7/1 8/2 12/3 11/4
+f 8/1 5/2 9/3 12/4
+# Base (para quando estiver flutuando alto)
+f 1/5 4/5 3/5 2/5
+# --- Faces da Cabeca ---
+f 9/1 10/2 14/3 13/4
+f 10/1 11/2 15/3 14/4
+f 11/1 12/2 16/3 15/4
+f 12/1 9/2 13/3 16/4
+# Topo da cabeca
+f 13/1 14/2 15/3 16/4
