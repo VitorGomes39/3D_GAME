@@ -1,0 +1,32 @@
+# Modelo Low-Poly PS1: Pedestal / Altar de Itens
+o Pedestal
+# --- Vertices (Base, Corpo e Topo) ---
+v -0.8000 0.0000 -0.8000
+v 0.8000 0.0000 -0.8000
+v 0.8000 0.0000 0.8000
+v -0.8000 0.0000 0.8000
+v -0.4000 1.5000 -0.4000
+v 0.4000 1.5000 -0.4000
+v 0.4000 1.5000 0.4000
+v -0.4000 1.5000 0.4000
+v -0.7000 2.5000 -0.7000
+v 0.7000 2.5000 -0.7000
+v 0.7000 2.5000 0.7000
+v -0.7000 2.5000 0.7000
+# --- Coordenadas UV para o Topo (Mapeamento Quad) ---
+vt 0.0000 0.0000
+vt 1.0000 0.0000
+vt 1.0000 1.0000
+vt 0.0000 1.0000
+# --- Faces da Base ao Corpo ---
+f 1 2 6 5
+f 2 3 7 6
+f 3 4 8 7
+f 4 1 5 8
+# --- Faces do Corpo ao Topo ---
+f 5 6 10 9
+f 6 7 11 10
+f 7 8 12 11
+f 8 5 9 12
+# --- Face Superior (Onde o item repousa) ---
+f 9/1 12/4 11/3 10/2
