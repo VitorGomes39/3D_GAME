@@ -1,1 +1,80 @@
+/* Reset básico para remover margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Remove barras de rolagem para o jogo não "mexer" se rolar o mouse */
+    background-color: #000; /* Fundo preto para esconder bordas vazias */
+    
+    /* Fonte estilo máquina de escrever/PS1 clássico para os textos */
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+/* O contêiner onde o Three.js vai injetar o canvas 3D */
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Mantém o 3D no fundo da página */
+}
+
+/* Contêiner da Interface de Usuário (HUD) */
+#ui-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Fica por cima do jogo 3D */
+    
+    /* Muito importante: permite que os cliques do mouse passem pela UI e cheguem no canvas do jogo */
+    pointer-events: none; 
+}
+
+/* Tela de carregamento com visual retrô */
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Fica por cima de absolutamente tudo */
+    transition: opacity 0.5s ease; /* Transição suave na hora do jogo esconder essa tela */
+}
+
+#loading-screen h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* Uma leve sombra vermelha para dar a vibe do Spooky's */
+    text-shadow: 2px 2px 0px #880000; 
+}
+
+/* A mira central (Crosshair) */
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px; /* Tamanho da mira */
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%; /* Faz a mira ser um pequeno ponto redondo */
+    
+    /* Garante que o centro da mira esteja exatamente no centro da tela */
+    transform: translate(-50%, -50%); 
+    
+    /* Contorno escuro para garantir que a mira seja visível mesmo se o jogador olhar para uma luz clara */
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
