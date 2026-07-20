@@ -55,12 +55,12 @@ function init() {
     // CHÃO TEMPORÁRIO (Para testar o movimento)
     // ==========================================
     // Cria uma grade gigante no chão (estilo Matrix/Tron)
-    const grade = new THREE.GridHelper(50, 50, 0x880000, 0x444444); 
-    grade.position.y = 0; // Fica exatamente nos pés do jogador
-    scene.add(grade);
+    // const grade = new THREE.GridHelper(50, 50, 0x880000, 0x444444); 
+    // grade.position.y = 0; // Fica exatamente nos pés do jogador
+    // scene.add(grade);
 
     // Inicializa os controles do jogador
-    initPlayerControls(camera, scene);
+    // initPlayerControls(camera, scene);
     // ... (resto do código)
     
     // ==========================================
