@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .botao {
+            padding: 18px 40px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .botao:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .botao:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="botao" onclick="window.location.href='frontend/index.html'">
+        Entrar
+    </button>
+
+</body>
+</html>
