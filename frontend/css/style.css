@@ -47,11 +47,13 @@ body, html {
     height: 100%;
     background-color: #111;
     color: #fff;
-    display: flex;
+    /* ADICIONE A LINHA ABAIXO PARA MATAR A TELA DE CARREGAMENTO */
+    display: none !important; 
+    
     justify-content: center;
     align-items: center;
-    z-index: 20; /* Fica por cima de absolutamente tudo */
-    transition: opacity 0.5s ease; /* Transição suave na hora do jogo esconder essa tela */
+    z-index: 20;
+    transition: opacity 0.5s ease;
 }
 
 #loading-screen h1 {
