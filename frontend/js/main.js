@@ -72,7 +72,7 @@ function init() {
     const textureLoader = new THREE.TextureLoader();
     
     // CAMINHO CORRIGIDO: incluindo a pasta 'frontend/' antes de tudo
-    const texturaParede = textureLoader.load('frontend/assets/texturas/parede.png');
+    const texturaParede = textureLoader.load('frontend/assets/texturas/parede_base.png');
     
     // Configurações de pixel art estilo PS1
     texturaParede.magFilter = THREE.NearestFilter;
