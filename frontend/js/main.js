@@ -46,6 +46,23 @@ function init() {
     luzLanterna.position.set(0, 1.6, 5);
     scene.add(luzLanterna);
 
+    // ... (código anterior do main.js)
+    const luzLanterna = new THREE.PointLight(0xffffff, 1, 10);
+    luzLanterna.position.set(0, 1.6, 5);
+    scene.add(luzLanterna);
+
+    // ==========================================
+    // CHÃO TEMPORÁRIO (Para testar o movimento)
+    // ==========================================
+    // Cria uma grade gigante no chão (estilo Matrix/Tron)
+    const grade = new THREE.GridHelper(50, 50, 0x880000, 0x444444); 
+    grade.position.y = 0; // Fica exatamente nos pés do jogador
+    scene.add(grade);
+
+    // Inicializa os controles do jogador
+    initPlayerControls(camera, scene);
+    // ... (resto do código)
+    
     // ==========================================
     // 5. EVENTOS DA JANELA
     // ==========================================
