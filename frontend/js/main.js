@@ -75,7 +75,7 @@ function init() {
 
     // Textura das paredes
     const textureLoader = new THREE.TextureLoader();
-    const texturaParede = textureLoader.load('frontend/assets/texturas/parede.png');
+    const texturaParede = textureLoader.load('frontend/assets/texturas/parede_base.png');
     texturaParede.magFilter = THREE.NearestFilter;
 
     const materialParede = new THREE.MeshStandardMaterial({ map: texturaParede, roughness: 0.8 });
@@ -99,10 +99,17 @@ function init() {
     const profundidadeMapa = MAPA.length * TAMANHO_BLOCO;
     const geometriaPlano = new THREE.PlaneGeometry(larguraMapa, profundidadeMapa);
 
-    // Chão Xadrez
-    const texturaChao = criarTexturaProcedural('#eeeeee', '#222222', 'xadrez');
+    // Chão
+    const texturaChao = textureLoader.load('frontend/assets/texturas/chao_tile2.png');
+    texturaChao.wrapS = THREE.RepeatWrapping;
+    texturaChao.wrapT = THREE.RepeatWrapping;
     texturaChao.repeat.set(MAPA[0].length, MAPA.length);
-    const materialChao = new THREE.MeshStandardMaterial({ map: texturaChao, roughness: 0.5 });
+    texturaChao.magFilter = THREE.NearestFilter;
+    
+    const materialChao = new THREE.MeshStandardMaterial({
+        map: texturaChao,
+        roughness: 0.5
+});
     
     const chao = new THREE.Mesh(geometriaPlano, materialChao);
     chao.rotation.x = -Math.PI / 2;
